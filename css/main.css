@@ -1,0 +1,412 @@
+@charset "utf-8";
+/*=======================
+=工具样式=
+========================*/
+.center-block{			/*居中显示*/
+	display: block;
+	margin-right: auto;
+	margin:-left;
+}
+
+.pull-right{	
+	float: right !important;	/*important使优先级最高*/
+}
+
+.pull-left{
+	float: left !important;
+}
+
+.text-right{
+	text-align: right !important;
+}
+
+.text-left{
+	text-align: left !important;
+}
+
+.text-center{
+	text-align: center !important;
+}
+
+.hide{
+	display: none !important;	/*隐藏且占用空间*/
+}
+
+.show{
+	display: block !important;
+}
+
+.invisible{
+	visibility: hidden;	/*隐藏但不占用空间*/
+}
+
+.text-hide{
+	font:0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border:0;
+}
+
+.clearfix:before,	/*防止顶部空白崩溃*/
+.clearfix:after{		/*bfc:块级格式化上下文;触发bfc可清除浮动*/
+	content: " ";
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+
+/**header*/
+header{
+	position: fixed;
+	width: 100%;
+	height: 76px;
+	background: #999;
+	z-index: 1000;/*设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+	
+	/*box-shadow: 0 0 10px #ccc;
+	-webkit-transition: all 5s ease;
+	transition: all 5s ease;*/
+	border-bottom: 1px #ecc000 solid;
+}
+
+header .logo {
+	float: left;
+	margin: 5px 30px;
+}
+
+header .logo .header_img,
+header .logo .header_p
+{
+	float: left;
+
+}
+
+header .logo .header_img img{
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+
+header .logo .header_img img:hover{
+	box-shadow: 0 0 15px #1FAEFF;
+}
+
+header .logo .header_p{
+	margin-left: 15px;
+	color: #000;
+	font-size: 1.2rem;
+	font-family: "allerbold";
+}
+
+header .logo .header_p .header_p1 {
+	margin: 0px 15px 5px;
+	padding: 5px 15px;
+	width: 50px;
+	
+}
+header .logo .header_p .header_p2 {
+	border-top: 1px solid #333;
+	padding: 0 15px;
+}
+
+header nav{
+	width: 100%;
+}
+
+header nav ul{
+	text-align: right;
+	margin-right: 5rem;
+}
+
+header nav ul li{
+	display: inline-block;
+	line-height: 4rem;
+	margin-right: 3rem;
+}
+
+header nav ul li a{
+	color: #000;
+	font-size: 1.2rem;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active{
+	color: #0ae;
+	text-decoration: underline;
+}
+
+
+/**首页样式*/
+.home{
+
+}
+.home .home-photo img{
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+}
+
+.home .home-photo img+img{
+	display: none;
+}
+
+.home .home-photo img:hover,
+.home .home-photo img:active{
+	box-shadow: 0 0 15px #1FAEFF;
+}
+
+.home .home-photo p{
+	display: block;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+.home .home-p p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0.8rem;
+}
+
+/*home2*/
+.home2 .home2-header{
+	margin-bottom: 1rem;
+}
+
+.home2 .home2-header span{
+	font-size: 2rem;
+}
+
+.home2 .home2-header span em{
+	display: block;
+	font-size: 0.8rem;
+	color: red;
+}
+
+.home2-section{
+	width: 800px;
+	height: 150px;
+	padding: 20px 0;
+	border-radius: 30px;
+	background: #a0a0b4;
+	margin: 0 auto;
+}
+
+/*.home2-section .about_list{
+	display: inline-block;
+	text-align: center;
+	width: 23%;
+	margin-left: 0.5rem;
+}*/
+.about_list {
+	float: left;
+	margin-left: 120px;
+	cursor: pointer;
+}
+
+#about_list1 {
+	margin-left: 60px;
+}
+
+.home2-section .about_list .about_list_eg {
+	width: 80px;
+	height: 80px;
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	border-radius: 50%;
+	overflow: hidden;
+	color: #fff;
+	/*-webkit-transition: background 1s, color 1s, box-shadow 1s;
+	transition: background 1s, color 1s, box-shadow 1s;*/
+}
+
+.about_list_eg:before {
+	display: block;
+	line-height: 130px;
+	text-align: center;
+}
+
+.about_list:hover .about_list_eg {
+	background: rgba(255,255,255,1);
+	color: #702fa8;
+	box-shadow: 0 0 0 8px rgba(255,255,255,0.3);
+}
+.about_list:hover .about_list_eg:before{
+	-webkit-animation: l_to_r 1s forwards;
+	-moz-animation: l_to_r 1s forwards;
+	-o-animation: l_to_r 1s forwards;
+	animation: l_to_r 1s forwards;
+}
+
+.about_list_cn {
+	padding-top: 20px;
+	line-height: 20px;
+	position: relative;
+	color: #fff;
+}
+
+.about_list_cn p {
+	padding-top: 10px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.about_list_cn p:before {
+	display: block;
+	content: "";
+	position: absolute;
+	background: #ccc;
+	height: 2px;
+	width: 90px;
+	bottom: 25px;
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+#about_en_edu:before {
+	content: url(../img/ed.png);
+}
+#about_en_age:before {
+	content: url(../img/age.png);
+}
+#about_en_loc:before {
+	content: url(../img/location.png);
+}
+#about_en_sta:before {
+	content: url(../img/status.png);
+}
+
+@-webkit-keyframes l_to_r {
+	49% {
+		-webkit-transform: translate(100%);
+		transform: translate(100%);
+	}
+	50% {
+		-webkit-transform: translate(-100%);
+		transform: translate(-100%);
+		opacity: 0;
+	}
+}
+@-moz-keyframes l_to_r {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+}
+@-o-keyframes l_to_r {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+}
+@keyframes l_to_r {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+}
+
+.home2 .home2-footer{
+	margin-top:1rem;
+}
+
+.home2 .home2-footer p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0.8rem;
+}
+
+.home2 .home2-footer p + p{
+	margin-top: 0.5rem;
+}
+
+/*home3*/
+.skill .skill-title{
+	width: 80%;
+	margin: 0 auto;
+}
+.skill .skill-title span{
+	font-size: 2rem;
+}
+
+.skill .skill-title span em{
+	display: block;
+	font-size: 0.8rem;
+	color: red;
+}
+
+.skill .skill-title p{
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+/*section4*/
+
+#section4 .home3-header{
+	font-size: 2rem;
+}
+
+#section4 .home3-header span em{
+	display: block;
+	font-size: 0.8rem;
+	color: red;
+}
+
+#section4 .pro-box ul li{
+	display: inline-block;
+}
+
+
+#section4 .pro-box ul li img{
+	border: 2px solid #666;
+	box-shadow: 0 0 4px #fff;
+}
+
+#section4 .pro-box ul li .demo1 p{
+	margin-top: 10rem;
+}
+
+
+/*contact*/
+
+.section .contact .title{
+	font-size: 2rem;
+}
+
+.section .contact .title span em{
+	display: block;
+	font-size: 0.8rem;
+	color: red;
+}
+
+.section .contact .b_to_t{
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+.section .contact .contact_head2 span{
+	font-size: 1.8rem;
+}
+
+.section .contact .contact_head2 span + span{
+	margin-left: 20px;
+}
+
+.section .contact .contact_scale{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-top: 20px;
+}

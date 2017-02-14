@@ -1,10 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>hello</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>我的简历</title>
+	<meta name="孟宁" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="js/pagePiling/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/jquery/jquery.js"></script>
+
+	<script type="text/javascript" src="js/pagePiling//jquery.pagepiling.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+    <style>
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+	#section3,
+	#section4,
+	#section5{
+		background-size: cover;
+		position: absolute;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section1,#section2,#section3,#section4,#section5{
+		background-image: url(imgs/bj.jpg);
+	}
+	#section2,#section3,#section4,#section5{
+		padding: 6% 0 0 0;
+	}
+    </style>
 </head>
 <body>
-	<p>123</p>
+
+	<!-- <ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
+		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+	</ul> -->
+<header>
+	<div class="logo clearfix">
+		<div class="header_img clearfix"><img src="img/logo.jpg" alt=""></div>
+		<div class ="header_p">
+			<p class="header_p1">tel:15133586523</p>
+			<p class="header_p2">e-mail:15133586523@163.com</p>
+		</div>
+	</div>
+	<nav>
+		<ul id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2" class=""><a href="#page2">关于我</a></li>
+			<li data-menuanchor="page3" class=""><a href="#page3">专业技能</a></li>
+			<li data-menuanchor="page4" class=""><a href="#page4">我的作品</a></li>
+			<li data-menuanchor="page5" class=""><a href="#page5">联系我</a></li>
+		</ul>
+	</nav>
+</header>
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+	    	<div class="home">
+				<div class="home-photo">
+					<img src="img/myphoto.png"  alt="">
+					<img src="img/myphoto3.jpg"  alt="">
+					<span><p>从来不跌倒不算光彩，每次跌倒后能再站起来，才是最大的荣耀。</p></span>
+				</div>
+				<div class="home-p">
+					<p  style="display: block;">我叫孟宁</p>
+						<p  style="display: block;">25岁</p>
+						<p  style="display: block;">来自美丽的山东莱芜</p>
+						<p  style="display: block;">15133586523@163.com</p>
+				</div>
+	    	</div>
+	    </div>
+	    <div class="section" id="section2">
+	    	<div class="home2">
+	    		<div class="home2-header">
+	    			<span>关于我<em>*ABOUT ME*</em></span>
+	    		</div>
+
+	    		<div class="home2-section clearfix">
+	    			<div class="about_list" id="about_list1">
+						<div class="about_list_eg" id="about_en_edu">education</div>
+						<div class="about_list_cn" id="about_cn_edu">学历<p>本科</p></div>
+					</div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_age">age</div>
+                        <div class="about_list_cn" id="about_cn_age">年龄<p>25岁</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_loc">location</div>
+                        <div class="about_list_cn" id="about_cn_loc">坐标<p>保定</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_sta">status</div>
+                        <div class="about_list_cn" id="about_cn_sta">状态<p>在读</p></div>
+                    </div>
+	    		</div>
+
+	    		<div class="home2-footer">
+					<p>2015年毕业于聊城大学，现燕山大学在读研究生</p>
+					<p>喜欢优雅的代码，代码强迫症患者</p>
+					<p>AngularJS ReactJs VueJs</p>
+					<p>层出不穷的框架让人兴奋，而不同框架背后的思路却在逐渐统一</p>
+	    		</div>
+	    		
+	    	</div>
+	    </div>
+	    <div class="section" id="section3">
+	    	<div class="skill">
+	    		<div class="skill-title">
+					<span>专业技能<em>*SKILL*</em></span>
+					<p>前端的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javascript的理解，而如今的思路必需有模块化，组件化，工程化</p>
+	    		</div>
+	    	</div>
+	    	<div id="container1">
+				 <div class="item-move">
+				    <span>HTML</span>
+				    <div class="tooltip">
+				      <p>深刻理解Web标准,
+				          熟练运用html标签</p>
+				      <div class="arrow"></div>
+				    </div>
+				</div>
+			
+
+				<div class="item-move">
+
+				    <span>CSS</span>
+				    <div class="tooltip">
+				      <p>熟练运用css及css3新属性
+				        注重浏览器兼容性</p>
+				      <div class="arrow"></div>
+				    </div>
+				</div>
+				 
+
+				<div class="item-move">
+
+				    <span>Jquery</span>
+				    <div class="tooltip">
+				      <p>掌握基本的Jquery使用方法</p>
+				      <div class="arrow"></div>
+				    </div>
+				</div>
+
+				<div class="item-move">
+
+				    <span>JavaScript</span>
+				    <div class="tooltip">
+				      <p>掌握原生JS的编程
+				          注重JavaScript性能优化</p>
+				      <div class="arrow"></div>
+				    </div>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="section" id="section4">
+	    	<div class="home3-header">
+	    		<span>我的作品<em>*DEMO*</em></span>
+	    	</div>
+	    	<div class="pro-box">
+				<ul>
+					<li>
+						<div class="demo1">
+							<p>理财宝</p><!-- <img src="img/demo-link.png" alt=""> -->
+						</div>
+						<a href="http://pan.baidu.com/s/1miwOxEo"><img src="img/demo_box1.jpg" alt=""></a>
+					</li>
+						<li>
+							<div class="demo2">
+								<p>360囧图</p>
+							</div>
+							<a href="http://pan.baidu.com/s/1o8ygnUi"><img src="img/demo_box2.jpg" alt=""></a>
+						</li>
+				</ul>
+	    	</div>
+	    </div>
+	    <div class="section" id="section5">
+	    	<div class="contact">
+	    		<div class="title">
+					<span>联系我<em>*CONTACT ME*</em></span>
+				</div>
+                <div id="contact_head">
+					<div id="contact_head1" class="b_to_t">灵感 代码 梦想 未来</div>
+                    <div class="contact_head2">
+                    	<span class="fade_in" style="color:red">inspiration</span>
+                        <span class="fade_in" style="color:blue">code</span>
+                        <span class="fade_in" style="color:green">dream</span>
+                        <span class="fade_in" style="color:red">future</span>
+                    </div>
+                </div>
+                <div id="contact_info" class="contact_scale fade_in">
+                    <ul><li>学习是一个充实愉悦的过程</li><li>前端更贴近用户，这种体验非常美妙</li><li>热爱FE.D，也热爱一切美好的事物</li><li>行路有良友，便是捷径</li><li>带上我吧，一起看到更大的世界</li></ul>
+                </div>
+	    	</div>
+	    </div>
+	</div>
+
 </body>
 </html>
+
